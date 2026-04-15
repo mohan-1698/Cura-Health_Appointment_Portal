@@ -5,18 +5,17 @@ import com.srm.hackathon.curahealth.base.BasePage;
 
 public class HomePage extends BasePage {
 
-    // Locators
     private By menuToggle = By.id("menu-toggle");
     private By loginLink = By.linkText("Login");
     private By makeAppointmentBtn = By.id("btn-make-appointment");
 
-    // Actions
-
     public void openMenu() {
+        waitForVisibility(menuToggle);
         click(menuToggle);
     }
 
     public void clickLogin() {
+        waitForVisibility(loginLink);
         click(loginLink);
     }
 
@@ -25,12 +24,11 @@ public class HomePage extends BasePage {
         clickLogin();
     }
 
-    // ✅ Used for unauthorized access test
     public void clickMakeAppointment() {
+        waitForVisibility(makeAppointmentBtn);
         click(makeAppointmentBtn);
     }
 
-    // ✅ Used for logout validation
     public boolean isHomePageDisplayed() {
         return isDisplayed(makeAppointmentBtn);
     }

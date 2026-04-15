@@ -9,6 +9,7 @@
       <class name="com.srm.hackathon.curahealth.tests.AppointmentTest">
         <methods>
           <include name="tearDown"/>
+          <include name="testBookAppointment"/>
           <include name="setUp"/>
           <include name="testPastDateValidation"/>
         </methods>

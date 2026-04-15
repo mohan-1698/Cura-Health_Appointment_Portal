@@ -5,9 +5,15 @@ import com.srm.hackathon.curahealth.base.BasePage;
 
 public class ConfirmationPage extends BasePage {
 
-	private By facility = By.xpath("//section[@id='summary']//p[@id='facility']");
-	private By visitDate = By.xpath("//section[@id='summary']//p[@id='visit_date']");
-	private By readmission = By.xpath("//section[@id='summary']//p[@id='hospital_readmission']");
+    private By summaryHeader = By.xpath("//section[@id='summary']//h2");
+
+    private By facility = By.xpath("//section[@id='summary']//p[@id='facility']");
+    private By visitDate = By.xpath("//section[@id='summary']//p[@id='visit_date']");
+    private By readmission = By.xpath("//section[@id='summary']//p[@id='hospital_readmission']");
+
+    public boolean isConfirmationPageDisplayed() {
+        return isDisplayed(summaryHeader);
+    }
 
     public String getFacility() {
         return getText(facility);
@@ -19,11 +25,5 @@ public class ConfirmationPage extends BasePage {
 
     public String getReadmission() {
         return getText(readmission);
-    }
-    
-    private By summaryHeader = By.xpath("//h2[text()='Appointment Confirmation']");
-
-    public boolean isConfirmationPageDisplayed() {
-        return isDisplayed(summaryHeader);
     }
 }

@@ -1,138 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-15T18:21:44 IST" name="CuraHealthSuite" finished-at="2026-04-15T18:22:11 IST" duration-ms="26818">
+  <suite started-at="2026-04-15T19:11:55 IST" name="Default suite" finished-at="2026-04-15T19:12:38 IST" duration-ms="43003">
     <groups>
     </groups>
-    <test started-at="2026-04-15T18:21:44 IST" name="AuthenticationTests" finished-at="2026-04-15T18:22:11 IST" duration-ms="26818">
-      <class name="com.srm.hackathon.curahealth.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:44 IST" name="setUp" finished-at="2026-04-15T18:21:53 IST" duration-ms="9442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:44 IST" name="setUp" finished-at="2026-04-15T18:21:55 IST" duration-ms="10731" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:45 IST" name="setUp" finished-at="2026-04-15T18:21:52 IST" duration-ms="6040" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:52 IST" name="testLogin" data-provider="loginData" finished-at="2026-04-15T18:21:55 IST" duration-ms="3299" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[John Doe]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ThisIsNotAPassword]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method signature="testUnauthorizedAccess()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:53 IST" name="testUnauthorizedAccess" finished-at="2026-04-15T18:21:54 IST" duration-ms="805" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUnauthorizedAccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:54 IST" name="tearDown" finished-at="2026-04-15T18:21:56 IST" duration-ms="1269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="testLogout()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:55 IST" name="testLogout" finished-at="2026-04-15T18:21:59 IST" duration-ms="4582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:55 IST" name="tearDown" finished-at="2026-04-15T18:21:56 IST" duration-ms="728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:56 IST" name="setUp" finished-at="2026-04-15T18:22:00 IST" duration-ms="4288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:21:59 IST" name="tearDown" finished-at="2026-04-15T18:22:00 IST" duration-ms="257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:22:00 IST" name="testLogin" data-provider="loginData" finished-at="2026-04-15T18:22:04 IST" duration-ms="3769" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[invalidUser]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[invalidPass]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:22:04 IST" name="tearDown" finished-at="2026-04-15T18:22:04 IST" duration-ms="296" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:22:04 IST" name="setUp" finished-at="2026-04-15T18:22:07 IST" duration-ms="3578" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:22:07 IST" name="testLogin" data-provider="loginData" finished-at="2026-04-15T18:22:09 IST" duration-ms="1792" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.LoginTest@6f36c2f0]" started-at="2026-04-15T18:22:09 IST" name="tearDown" finished-at="2026-04-15T18:22:10 IST" duration-ms="254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.srm.hackathon.curahealth.tests.LoginTest -->
+    <test started-at="2026-04-15T19:11:55 IST" name="Default test" finished-at="2026-04-15T19:12:38 IST" duration-ms="43003">
       <class name="com.srm.hackathon.curahealth.tests.AppointmentTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:21:44 IST" name="setUp" finished-at="2026-04-15T18:21:53 IST" duration-ms="8984" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:11:55 IST" name="setUp" finished-at="2026-04-15T19:12:13 IST" duration-ms="18163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:21:44 IST" name="setUp" finished-at="2026-04-15T18:21:52 IST" duration-ms="7718" status="PASS">
+        <test-method signature="testAppointmentHistory()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:13 IST" name="testAppointmentHistory" finished-at="2026-04-15T19:12:16 IST" duration-ms="2902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppointmentHistory -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:16 IST" name="tearDown" finished-at="2026-04-15T19:12:16 IST" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:16 IST" name="setUp" finished-at="2026-04-15T19:12:20 IST" duration-ms="3844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testBookAppointment()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:21:52 IST" name="testBookAppointment" finished-at="2026-04-15T18:21:58 IST" duration-ms="5946" status="PASS">
+        <test-method signature="testBookAppointment()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:20 IST" name="testBookAppointment" finished-at="2026-04-15T19:12:23 IST" duration-ms="2982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBookAppointment -->
-        <test-method signature="testPastDateValidation()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:21:53 IST" name="testPastDateValidation" finished-at="2026-04-15T18:22:10 IST" duration-ms="17329" status="FAIL">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:23 IST" name="tearDown" finished-at="2026-04-15T19:12:23 IST" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:23 IST" name="setUp" finished-at="2026-04-15T19:12:27 IST" duration-ms="3542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMultipleAppointments()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:27 IST" name="testMultipleAppointments" finished-at="2026-04-15T19:12:31 IST" duration-ms="4605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultipleAppointments -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:31 IST" name="tearDown" finished-at="2026-04-15T19:12:32 IST" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:32 IST" name="setUp" finished-at="2026-04-15T19:12:35 IST" duration-ms="3377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPastDateValidation()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:35 IST" name="testPastDateValidation" finished-at="2026-04-15T19:12:38 IST" duration-ms="2877" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Past date was accepted and user navigated to confirmation page, but it should be rejected expected [true] but found [false]]]>
@@ -142,7 +57,7 @@
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at com.srm.hackathon.curahealth.tests.AppointmentTest.testPastDateValidation(AppointmentTest.java:77)
+at com.srm.hackathon.curahealth.tests.AppointmentTest.testPastDateValidation(AppointmentTest.java:58)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,27 +70,33 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPastDateValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:21:58 IST" name="tearDown" finished-at="2026-04-15T18:21:58 IST" duration-ms="744" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@7f2cfe3f]" started-at="2026-04-15T18:22:10 IST" name="tearDown" finished-at="2026-04-15T18:22:11 IST" duration-ms="273" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.srm.hackathon.curahealth.tests.AppointmentTest@45752059]" started-at="2026-04-15T19:12:38 IST" name="tearDown" finished-at="2026-04-15T19:12:38 IST" duration-ms="154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.srm.hackathon.curahealth.tests.AppointmentTest -->
-    </test> <!-- AuthenticationTests -->
-  </suite> <!-- CuraHealthSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
