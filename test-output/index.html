@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-CuraHealthSuite" class="navigator-link">
-              <span class="suite-name border-passed">CuraHealthSuite</span>
+              <span class="suite-name border-failed">CuraHealthSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CuraHealthSuite" class="hide-methods failed suite-CuraHealthSuite"> (hide)</a> <!-- hide-methods failed suite-CuraHealthSuite -->
+                      <a href="#" panel-name="suite-CuraHealthSuite" class="show-methods failed suite-CuraHealthSuite"> (show)</a> <!-- show-methods failed suite-CuraHealthSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-CuraHealthSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CuraHealthSuite" title="com.srm.hackathon.curahealth.tests.AppointmentTest" class="method navigator-link" hash-for-method="testPastDateValidation">testPastDateValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CuraHealthSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,17 @@
                     <div class="method-list-content passed suite-CuraHealthSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-CuraHealthSuite" title="com.srm.hackathon.curahealth.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(, , )">testLogin(, , )</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CuraHealthSuite" title="com.srm.hackathon.curahealth.tests.AppointmentTest" class="method navigator-link" hash-for-method="testBookAppointment">testBookAppointment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-CuraHealthSuite" title="com.srm.hackathon.curahealth.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(invalidUser, invalidPass, invalid)">testLogin(invalidUser, invalidPass, invalid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CuraHealthSuite" title="com.srm.hackathon.curahealth.tests.LoginTest" class="method navigator-link" hash-for-method="testLogin(, , )">testLogin(, , )</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,6 +157,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CuraHealthSuite" class="panel CuraHealthSuite">
+          <div class="suite-CuraHealthSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPastDateValidation">
+                  </a> <!-- testPastDateValidation -->
+                  <span class="method-name">testPastDateValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Past date was accepted and user navigated to confirmation page, but it should be rejected expected [true] but found [false]
+	at com.srm.hackathon.curahealth.tests.AppointmentTest.testPastDateValidation(AppointmentTest.java:77)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CuraHealthSuite-class-failed -->
           <div class="suite-CuraHealthSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -146,18 +189,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(, , )">
-                  </a> <!-- testLogin(, , ) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(,,)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testLogin(invalidUser, invalidPass, invalid)">
                   </a> <!-- testLogin(invalidUser, invalidPass, invalid) -->
                   <span class="method-name">testLogin</span>
                   <span class="parameters">(invalidUser,invalidPass,invalid)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin(, , )">
+                  </a> <!-- testLogin(, , ) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(,,)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -184,6 +227,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-CuraHealthSuite-class-passed -->
+          <div class="suite-CuraHealthSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBookAppointment">
+                  </a> <!-- testBookAppointment -->
+                  <span class="method-name">testBookAppointment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CuraHealthSuite-class-passed -->
         </div> <!-- panel CuraHealthSuite -->
         <div panel-name="test-xml-CuraHealthSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -194,9 +252,13 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;methods&quot; name=&quot;CuraHealthSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.srm.hackathon.curahealth.listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;methods&quot; name=&quot;AuthenticationTests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.srm.hackathon.curahealth.tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.srm.hackathon.curahealth.tests.AppointmentTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AuthenticationTests --&gt;
 &lt;/suite&gt; &lt;!-- CuraHealthSuite --&gt;
@@ -210,7 +272,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">AuthenticationTests (1 class)</span>
+                <span class="test-name">AuthenticationTests (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -236,32 +298,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogout')
-data.setCell(0, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
-data.setCell(0, 3, 2739);
+data.setCell(0, 1, 'testPastDateValidation')
+data.setCell(0, 2, 'com.srm.hackathon.curahealth.tests.AppointmentTest')
+data.setCell(0, 3, 17329);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testLogin')
-data.setCell(1, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
-data.setCell(1, 3, 2577);
+data.setCell(1, 1, 'testBookAppointment')
+data.setCell(1, 2, 'com.srm.hackathon.curahealth.tests.AppointmentTest')
+data.setCell(1, 3, 5946);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testLogin')
+data.setCell(2, 1, 'testLogout')
 data.setCell(2, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
-data.setCell(2, 3, 2189);
+data.setCell(2, 3, 4582);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testLogin')
 data.setCell(3, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
-data.setCell(3, 3, 1816);
+data.setCell(3, 3, 3769);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUnauthorizedAccess')
+data.setCell(4, 1, 'testLogin')
 data.setCell(4, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
-data.setCell(4, 3, 698);
+data.setCell(4, 3, 3299);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testLogin')
+data.setCell(5, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
+data.setCell(5, 3, 1792);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testUnauthorizedAccess')
+data.setCell(6, 2, 'com.srm.hackathon.curahealth.tests.LoginTest')
+data.setCell(6, 3, 805);
 window.suiteTableData['CuraHealthSuite']= { tableData: data, tableDiv: 'times-div-CuraHealthSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 37 seconds</span>
               <div id="times-div-CuraHealthSuite">
               </div> <!-- times-div-CuraHealthSuite -->
             </div> <!-- times-div -->
@@ -292,61 +362,108 @@ return data;
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1484 ms</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1459 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLogout</span>
-                <span class="method-start">5249 ms</span>
+                <span class="method-name">testLogin(John Doe, ThisIsNotAPassword, valid)</span>
+                <span class="method-start">7502 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testBookAppointment</span>
+                <span class="method-start">7718 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testLogin(John Doe, ThisIsNotAPassword, valid)</span>
-                <span class="method-start">5373 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testPastDateValidation</span>
+                <span class="method-start">8984 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUnauthorizedAccess</span>
-                <span class="method-start">5412 ms</span>
+                <span class="method-start">9443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6116 ms</span>
+                <span class="method-start">10264 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testLogout</span>
+                <span class="method-start">10733 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7564 ms</span>
+                <span class="method-start">10805 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">7816 ms</span>
+                <span class="method-start">11534 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7990 ms</span>
+                <span class="method-start">13666 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">15317 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testLogin(invalidUser, invalidPass, invalid)</span>
-                <span class="method-start">13799 ms</span>
+                <span class="method-start">15822 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16381 ms</span>
+                <span class="method-start">19593 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">16610 ms</span>
+                <span class="method-start">19889 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(, , )</span>
-                <span class="method-start">20453 ms</span>
+                <span class="method-start">23467 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22271 ms</span>
+                <span class="method-start">25263 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.srm.hackathon.curahealth.tests.AppointmentTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">26483 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
