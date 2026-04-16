@@ -4,9 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.srm.hackathon.curahealth.base.BaseTest;
-import com.srm.hackathon.curahealth.pages.AppointmentPage;
-import com.srm.hackathon.curahealth.pages.HomePage;
-import com.srm.hackathon.curahealth.pages.LoginPage;
+import com.srm.hackathon.curahealth.pages.*;
+import com.srm.hackathon.curahealth.utils.ConfigReader;
 
 public class AuthenticationTest extends BaseTest {
 
@@ -58,7 +57,10 @@ public class AuthenticationTest extends BaseTest {
         homePage.navigateToLogin();
 
         // Step 2: Login
-        loginPage.login("John Doe", "ThisIsNotAPassword");
+        loginPage.login(
+        	    ConfigReader.getUsername(),
+        	    ConfigReader.getPassword()
+        	);
 
         // 🔥 Reinitialize after login
         appointmentPage = new AppointmentPage();

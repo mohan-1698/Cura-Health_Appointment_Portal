@@ -6,10 +6,8 @@ import com.google.gson.JsonObject;
 
 import com.srm.hackathon.curahealth.dataproviders.AppointmentDataProvider;
 import com.srm.hackathon.curahealth.base.BaseTest;
-import com.srm.hackathon.curahealth.pages.AppointmentPage;
-import com.srm.hackathon.curahealth.pages.ConfirmationPage;
-import com.srm.hackathon.curahealth.pages.HomePage;
-import com.srm.hackathon.curahealth.pages.LoginPage;
+import com.srm.hackathon.curahealth.pages.*;
+import com.srm.hackathon.curahealth.utils.ConfigReader;
 
 public class AppointmentBookingTest extends BaseTest {
 	
@@ -25,7 +23,10 @@ public class AppointmentBookingTest extends BaseTest {
 		    ConfirmationPage confirmationPage = new ConfirmationPage();
 
 		    homePage.navigateToLogin();
-		    loginPage.login("John Doe", "ThisIsNotAPassword");
+		    loginPage.login(
+		    	    ConfigReader.getUsername(),
+		    	    ConfigReader.getPassword()
+		    	);
 
 		    appointmentPage.selectFacility(data.get("facility").getAsString());
 		    appointmentPage.selectReadmission();
@@ -51,7 +52,10 @@ public class AppointmentBookingTest extends BaseTest {
 
 	    // Login
 	    homePage.navigateToLogin();
-	    loginPage.login("John Doe", "ThisIsNotAPassword");
+	    loginPage.login(
+	    	    ConfigReader.getUsername(),
+	    	    ConfigReader.getPassword()
+	    	);
 
 	    // Fill form with past date
 	    appointmentPage.selectFacility("Tokyo CURA Healthcare Center");

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.srm.hackathon.curahealth.base.BaseTest;
 import com.srm.hackathon.curahealth.pages.*;
+import com.srm.hackathon.curahealth.utils.ConfigReader;
 
 public class AppointmentHistoryTest extends BaseTest {
 
@@ -18,7 +19,10 @@ public class AppointmentHistoryTest extends BaseTest {
         HistoryPage historyPage = new HistoryPage();
 
         homePage.navigateToLogin();
-        loginPage.login("John Doe", "ThisIsNotAPassword");
+        loginPage.login(
+        	    ConfigReader.getUsername(),
+        	    ConfigReader.getPassword()
+        	);
 
         appointmentPage.selectFacility("Tokyo CURA Healthcare Center");
         appointmentPage.selectProgram("Medicare");

@@ -36,4 +36,12 @@ public class ConfigReader {
     public static boolean isHeadless() {
         return Boolean.parseBoolean(properties.getProperty("headless"));
     }
+    
+    public static String getUsername() {
+        return properties.getProperty("username");
+    }
+
+    public static String getPassword() {
+        return properties.getProperty("password");
+    }
 }

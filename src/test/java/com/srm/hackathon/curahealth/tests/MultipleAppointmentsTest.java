@@ -8,6 +8,7 @@ import com.srm.hackathon.curahealth.pages.AppointmentPage;
 import com.srm.hackathon.curahealth.pages.HistoryPage;
 import com.srm.hackathon.curahealth.pages.HomePage;
 import com.srm.hackathon.curahealth.pages.LoginPage;
+import com.srm.hackathon.curahealth.utils.ConfigReader;
 
 public class MultipleAppointmentsTest extends BaseTest {
 	
@@ -20,7 +21,10 @@ public class MultipleAppointmentsTest extends BaseTest {
 	    HistoryPage historyPage = new HistoryPage();
 
 	    homePage.navigateToLogin();
-	    loginPage.login("John Doe", "ThisIsNotAPassword");
+	    loginPage.login(
+	    	    ConfigReader.getUsername(),
+	    	    ConfigReader.getPassword()
+	    	);
 
 	    // First booking
 	    appointmentPage.selectFacility("Tokyo CURA Healthcare Center");
