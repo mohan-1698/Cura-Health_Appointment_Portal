@@ -1,5 +1,0 @@
-# Created at 2026-04-16T10:34:24.198
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Drive_E\Revision_Automation\curahealth-automation\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

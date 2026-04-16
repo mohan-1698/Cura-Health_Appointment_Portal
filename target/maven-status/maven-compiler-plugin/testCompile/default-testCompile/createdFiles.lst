@@ -1,9 +1,0 @@
-com\srm\hackathon\curahealth\base\BaseTest.class
-com\srm\hackathon\curahealth\tests\AuthenticationTest.class
-com\srm\hackathon\curahealth\tests\MultipleAppointmentsTest.class
-com\srm\hackathon\curahealth\tests\AppointmentBookingTest.class
-com\srm\hackathon\curahealth\tests\FormValidationTest.class
-com\srm\hackathon\curahealth\tests\AppointmentHistoryTest.class
-com\srm\hackathon\curahealth\dataproviders\AppointmentDataProvider.class
-com\srm\hackathon\curahealth\dataproviders\LoginDataProvider.class
-com\srm\hackathon\curahealth\listeners\TestListener.class
