@@ -1,14 +1,43 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="CuraHealthSuite" parallel="methods" thread-count="5">
 
-   <listeners>
+<suite name="CuraHealthSuite" parallel="tests" thread-count="5">
+
+    <listeners>
         <listener class-name="com.srm.hackathon.curahealth.listeners.TestListener"/>
     </listeners>
 
+    <!-- Module 1 -->
     <test name="AuthenticationTests">
         <classes>
-            <class name="com.srm.hackathon.curahealth.tests.LoginTest"/>
-            <class name="com.srm.hackathon.curahealth.tests.AppointmentTest"/>
+            <class name="com.srm.hackathon.curahealth.tests.AuthenticationTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 2 -->
+    <test name="AppointmentBookingTests">
+        <classes>
+            <class name="com.srm.hackathon.curahealth.tests.AppointmentBookingTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 3 -->
+    <test name="AppointmentHistoryTests">
+        <classes>
+            <class name="com.srm.hackathon.curahealth.tests.AppointmentHistoryTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 4 -->
+    <test name="MultipleAppointmentsTests">
+        <classes>
+            <class name="com.srm.hackathon.curahealth.tests.MultipleAppointmentsTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 5 -->
+    <test name="FormValidationTests">
+        <classes>
+            <class name="com.srm.hackathon.curahealth.tests.FormValidationTest"/>
         </classes>
     </test>
 

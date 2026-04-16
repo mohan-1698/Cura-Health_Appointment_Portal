@@ -1,0 +1,14 @@
+[
+  {
+    "facility": "Hongkong CURA Healthcare Center",
+    "program": "Medicare",
+    "date": "30/04/2026",
+    "comment": "Test Booking"
+  },
+  {
+    "facility": "Tokyo CURA Healthcare Center",
+    "program": "Medicaid",
+    "date": "25/04/2026",
+    "comment": "History Test"
+  }
+]
